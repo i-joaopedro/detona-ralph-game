@@ -54,6 +54,18 @@ function addListenerHitBox(){
     });
 }
 
+function resetGame() {
+    state.values.result = 0;
+    state.view.score.textContent = state.values.result;
+    state.values.curretTime = 60;
+    state.view.timeLeft.textContent = state.values.curretTime;
+
+    clearInterval(state.actions.timerId);
+    clearInterval(state.actions.countDownTimerId);
+    state.actions.timerId = setInterval(randomSquare, state.values.gameVelocity);
+    state.actions.countDownTimerId = setInterval(countDown, 1000);
+}
+
 function main(){
     addListenerHitBox();
 }

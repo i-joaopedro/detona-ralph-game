@@ -46,3 +46,13 @@
     background-image: url("../images/ralph.png");
     background-size: cover;
 }
+
+.reset {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+#reset_button {
+    padding: 1rem;
+    background-color: #ffd700;
+    border-radius: 5px;
+}
